@@ -101,27 +101,34 @@ main {
 }
 
 .catalog h2 {
+  /* Cambiamos el título, el texto lo vas a cambiar en HTML */
+  /* Aquí sólo está el estilo */
   color: #fff;
   font-size: 2rem;
   margin-bottom: 2rem;
   text-align: center;
 }
 
+/* Mostrar productos en fila y con ajuste para que se vean muchos */
 .cards-vertical {
   display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  max-width: 600px;
+  flex-wrap: wrap;          /* Para que si no entran se vayan a la siguiente fila */
+  gap: 1.5rem;
+  justify-content: center;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
+/* Ajustar cada tarjeta para que ocupe menos ancho y se vean más */
 .card {
-  background: #222222; /* fondo gris oscuro */
+  background: #d3d3d3; /* gris claro */
   border-radius: 10px;
-  padding: 1.5rem;
+  padding: 1rem;
   text-align: center;
-  box-shadow: 0 0 15px rgba(255 255 255 / 0.1);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  width: 180px;           /* Ancho fijo para que entren muchos */
+  flex-shrink: 0;
 }
 
 .card:hover {
@@ -130,12 +137,13 @@ main {
 
 .card img {
   max-width: 100%;
-  max-height: 250px;
+  max-height: 150px;
   object-fit: contain;
   border-radius: 8px;
   margin-bottom: 1rem;
-  filter: brightness(0.9);
+  filter: brightness(1);
 }
+
 
 /* BOTONES */
 .btn {
