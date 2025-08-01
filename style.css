@@ -109,27 +109,33 @@ main {
   text-align: center;
 }
 
-/* Mostrar productos en fila y con ajuste para que se vean muchos */
 .cards-vertical {
   display: flex;
-  flex-wrap: wrap;          /* Para que si no entran se vayan a la siguiente fila */
-  gap: 1.5rem;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Ajustar cada tarjeta para que ocupe menos ancho y se vean más */
 .card {
-  background: #d3d3d3; /* gris claro */
+  background: #d3d3d3;
   border-radius: 10px;
   padding: 1rem;
   text-align: center;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-  width: 180px;           /* Ancho fijo para que entren muchos */
-  flex-shrink: 0;
+  flex: 1 1 calc(50% - 2rem); /* 2 columnas con espacio */
+  max-width: calc(50% - 2rem);
 }
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 100%; /* En móviles ocupa todo el ancho */
+    max-width: 100%;
+  }
+}
+
 
 .card:hover {
   transform: scale(1.05);
