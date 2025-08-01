@@ -169,19 +169,18 @@ main {
   color: #111111;
 }
 
-/* INFO */
 .info {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5rem;
   padding: 5rem 2rem;
-  background: #222222;
+  background: #d3d3d3; /* fondo gris claro */
   max-width: 900px;
   margin: 0 auto;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
-  color: #fff;
+  color: #111; /* texto oscuro */
   flex-wrap: wrap;
 }
 
@@ -211,6 +210,7 @@ main {
   margin: 0;
 }
 
+
 /* NOSOTROS */
 .nosotros {
   padding: 4rem 2rem;
@@ -226,14 +226,13 @@ main {
   margin-bottom: 1rem;
 }
 
-/* CONTACTO */
 .contacto {
   padding: 4rem 2rem;
   max-width: 800px;
   margin: 0 auto 5rem;
   text-align: center;
-  background: #222222;
-  color: #fff;
+  background: #d3d3d3; /* fondo gris claro */
+  color: #111;          /* texto oscuro */
 }
 
 .contacto h2 {
@@ -244,7 +243,7 @@ main {
 .contacto p {
   margin-bottom: 1rem;
   font-size: 1rem;
-  color: #ccc;
+  color: #222; /* gris más oscuro para el texto */
 }
 
 /* ÍCONOS flotantes */
