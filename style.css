@@ -1,1 +1,290 @@
+/* RESET Y FUENTES */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@700&display=swap');
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff; /* fondo blanco */
+  color: #000; /* texto negro */
+  line-height: 1.6;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;  /* menos espacio arriba y abajo */
+  height: 100px;          /* altura fija para el header */
+  z-index: 1000;
+  border-bottom: 2px solid #000;
+  color: #000;
+}
+
+.logo img {
+  height: 75px;       /* altura del logo (ajusta este valor) */
+  max-height: 80px;   /* para que no crezca más del header */
+  width: auto;        /* para mantener proporción */
+  object-fit: contain;
+}
+
+.nav-links li a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a:focus {
+  color: #555;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #000;
+  cursor: pointer;
+}
+
+/* MAIN */
+main {
+  position: relative;
+  z-index: 1;
+  padding-top: 90px;
+  background-color: #fff; /* fondo blanco */
+}
+
+/* HERO */
+.hero {
+  padding: 5rem 2rem;
+  background: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: #000;
+  text-align: center;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: center;
+  color: #222;
+}
+
+/* CATALOGO */
+.catalog {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.catalog h2 {
+  color: #000;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.cards-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  max-width: 100%;
+  max-height: 250px;   /* Limite la altura para que no sea muy grande */
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* BOTONES */
+.btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 0.6rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #333;
+}
+
+/* INFO */
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  padding: 5rem 2rem;
+  background: #f0f0f0;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .info {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 1rem;
+    max-width: 100%;
+  }
+
+  .info-item p {
+    font-size: 3rem;
+  }
+}
+
+.info-item h2 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.info-item p {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1;
+  margin: 0;
+}
+
+/* NOSOTROS */
+.nosotros {
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  background: #fff;
+}
+
+.nosotros h2 {
+  color: #000;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* CONTACTO */
+.contacto {
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: 0 auto 5rem;
+  text-align: center;
+  background: #f0f0f0;
+}
+
+.contacto h2 {
+  color: #000;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contacto p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #222;
+}
+
+/* ÍCONOS flotantes */
+.whatsapp-float,
+.instagram-float {
+  position: fixed;
+  right: 25px;
+  width: 55px;
+  height: 55px;
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+  padding: 8px;
+}
+
+.whatsapp-float:hover,
+.instagram-float:hover {
+  transform: scale(1.1);
+}
+
+.instagram-float {
+  bottom: 90px;
+}
+
+.whatsapp-float {
+  bottom: 20px;
+}
+
+.instagram-float img,
+.whatsapp-float img {
+  width: 30px;
+  height: 30px;
+}
+
+/* RESPONSIVE NAV */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Ajustes header y logo para móvil */
+  .header {
+    height: 60px;
+    padding: 0.3rem 1rem;
+  }
+
+  .logo img {
+    height: 30px;
+    max-height: 40px;
+  }
+}
